@@ -1,5 +1,8 @@
-//POO
-
+/*
+ * Pasando funciones como parametros e invocar posteriormente 
+ *  2017/09/18
+ *  @mdark1001
+ */
 
 var Objecto = function() {
 

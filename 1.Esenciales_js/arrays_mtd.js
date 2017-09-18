@@ -1,3 +1,9 @@
+/*
+ * Algunas funciones importantes sobre un array
+ *  2017/09/18
+ *  @mdark1001    
+ */
+
 var mi_arreglo = [1, 5, 4, 5, 4, 57, 63, 1, 7, 8, 2, 10];
 
 //uso de forEach

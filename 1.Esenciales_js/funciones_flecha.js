@@ -1,3 +1,9 @@
+/*
+ * una forma de evitar las funciones anonimas, usando ()=>
+ * 2017/09/18
+ * @mdark1001
+ */
+
 var x = function(a, b) {
   return a + b;
 }
