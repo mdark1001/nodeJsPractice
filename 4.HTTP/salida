@@ -1,0 +1,32 @@
+
+> http_client@1.0.0 start /home/miguel/proyectos/nodejs/4.HTTP
+> node main.js
+
+Cliente { host: 'api.github.com', port: '443', protocol: 'https' }
+{ hostname: 'api.github.com',
+  port: '443',
+  method: 'GET',
+  path: 'https://api.github.com/user/mdark1001',
+  headers: { Accept: '*/*', 'User-Agent': 'Cliente node.js' } }
+{ status: undefined,
+  body: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3/users/#get-a-single-user"}',
+  headers: 
+   { server: 'GitHub.com',
+     date: 'Wed, 27 Sep 2017 15:49:22 GMT',
+     'content-type': 'application/json; charset=utf-8',
+     'content-length': '102',
+     connection: 'close',
+     status: '404 Not Found',
+     'x-ratelimit-limit': '60',
+     'x-ratelimit-remaining': '56',
+     'x-ratelimit-reset': '1506530828',
+     'x-github-media-type': 'github.v3; format=json',
+     'access-control-expose-headers': 'ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval',
+     'access-control-allow-origin': '*',
+     'content-security-policy': 'default-src \'none\'',
+     'strict-transport-security': 'max-age=31536000; includeSubdomains; preload',
+     'x-content-type-options': 'nosniff',
+     'x-frame-options': 'deny',
+     'x-xss-protection': '1; mode=block',
+     'x-runtime-rack': '0.009092',
+     'x-github-request-id': 'D0DA:886B:3E0A0F8:80A16E5:59CBC882' } }

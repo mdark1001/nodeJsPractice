@@ -1,0 +1,19 @@
+{
+  "name": "http_client",
+  "version": "1.0.0",
+  "description": "Una simple implentación del módulo de Http de NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "client",
+    "v1.0.0",
+    "mdark1001"
+  ],
+  "author": "@mdark1001",
+  "license": "Apache-2.0"
+}
