@@ -1,4 +1,6 @@
 const fs = require('fs');
+123
+
 class Cliente {
 
   constructor(host, port, protocol) {
@@ -35,14 +37,22 @@ class Cliente {
 
       }
       //console.log(options);
-    this.request(options, callback);
+    this.request(options, null, callback);
   }
-  post(uri, data) {
+  post(uri, data, callback) {
+    var options = {
+      hostname: this.host,
+      port: this.port,
+      method: 'POST',
+      path: this.protocol + "://" + this.host + '' + uri,
+      headers: this.procesarHeaders()
 
+    }
+    this.request(options, data, callback);
   }
 
   //manejo de peticiones
-  request(options, callback) {
+  request(options, data, callback) {
     if (this.protocol != "http" && this.protocol != "https") {
       console.log(new Error("Error al hacer el request"));
       return;
@@ -56,6 +66,7 @@ class Cliente {
     }
 
     var peticion = http.request(options, (canalRespuesta) => {
+
       canalRespuesta.on('data', (chuck) => {
         respuesta.body += chuck;
       });
@@ -67,6 +78,10 @@ class Cliente {
       });
 
     });
+
+    if (data != undefined && data != null) {
+      peticion.write(JSON.stringify(data));
+    }
 
     peticion.end();
   }
