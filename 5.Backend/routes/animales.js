@@ -12,15 +12,16 @@ var contadorVistas = function(req, res, next) {
   req.session.vistas++;
   next();
 }
-router.use(contadorVistas);
+router.use(contadorVistas); // uso de millware
 
 router.get('/', function(req, res, next) {
-  console.log(req.session.vistas);
   res.send("API de animales");
-})
+});
+
+
 router.post('/', function(req, res, next) {
-  console.log(req.session.vistas);
-  res.send("API de animales");
-})
+  console.log(req.body);
+  res.send("API de animales" + req.body);
+});
 
 module.exports = router;

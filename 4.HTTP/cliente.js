@@ -80,6 +80,9 @@ class Cliente {
     });
 
     if (data != undefined && data != null) {
+      peticion.setHeader("Content-Length", Buffer.byteLength(JSON.stringify(
+        data)));
+      peticion.setHeader("Content-Type", "application/json");
       peticion.write(JSON.stringify(data));
     }
 

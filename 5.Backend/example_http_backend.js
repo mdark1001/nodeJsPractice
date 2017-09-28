@@ -5,8 +5,11 @@ var clienteApi = new cliente('localhost', '3000', 'http');
 clienteApi.get('/animals/', (respuesta) => {
   console.log(respuesta);
 });
+
+
 clienteApi.post('/animals/', {
-  "body": "algo"
+  "animal": "perro",
+  "character": "perro"
 }, (respuesta) => {
   console.log(respuesta);
 });
