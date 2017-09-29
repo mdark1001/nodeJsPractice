@@ -21,6 +21,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   console.log(req.body);
+  if (req.get('content-type') != 'application/json') {
+    res.status(403).send('Error expected json format');
+  }
   res.send("API de animales" + req.body);
 });
 
