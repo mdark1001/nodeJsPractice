@@ -1,5 +1,4 @@
 const fs = require('fs');
-123
 
 class Cliente {
 
